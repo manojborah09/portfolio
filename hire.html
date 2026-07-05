@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hire Me — WayfarerDesign</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-logo">W</span>
+      <span class="brand-name">WayfarerDesign</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#faqs">FAQs</a>
+    </nav>
+    <a href="hire.html" class="btn btn-primary btn-small">Hire Me</a>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="padding-top:70px;">
+  <div class="chip chip-center">Get in touch</div>
+  <h1 class="hero-title" style="font-size:38px;">Let's turn your ideas <span class="accent">into clicks</span></h1>
+  <p class="hero-sub">Tell me about your channel and what you need — I'll follow up within a day.</p>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <form class="hire-form" id="hireForm">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="name@channel.com" required>
+    </div>
+    <div class="form-row">
+      <label for="youtube">YouTube channel</label>
+      <input type="text" id="youtube" name="youtube" placeholder="Link to your channel">
+    </div>
+    <div class="form-row">
+      <label for="service">Which service do you need?</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option>Thumbnail ideation only</option>
+        <option>Thumbnail design only</option>
+        <option>Ideation and design</option>
+        <option>Full packaging (ideation, design, title, tracking)</option>
+        <option>One-time consulting call</option>
+        <option>Something else</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="socials">Other socials (optional)</label>
+      <input type="text" id="socials" name="socials" placeholder="Instagram, X, Discord, etc.">
+    </div>
+    <div class="form-row">
+      <label for="message">Anything else I should know? (optional)</label>
+      <textarea id="message" name="message" rows="4" placeholder="Timeline, budget, video style..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:100%;">Send</button>
+    <p class="form-status" id="formStatus"></p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="brand footer-brand">
+    <span class="brand-logo">W</span>
+    <span class="brand-name">WayfarerDesign</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#workflow">Workflow</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#faqs">FAQs</a>
+  </div>
+  <p class="footer-copy">© 2026 WayfarerDesign. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

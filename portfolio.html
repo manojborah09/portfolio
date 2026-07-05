@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — WayfarerDesign</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-logo">W</span>
+      <span class="brand-name">WayfarerDesign</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active-link">Portfolio</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#faqs">FAQs</a>
+    </nav>
+    <a href="hire.html" class="btn btn-primary btn-small">Hire Me</a>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="padding-top:70px;">
+  <div class="chip chip-center">Portfolio</div>
+  <h1 class="hero-title" style="font-size:40px;">Thumbnail <span class="accent">Hall of Fame</span></h1>
+  <p class="hero-sub">A curated collection of my strongest thumbnail designs, organized by niche.</p>
+</section>
+
+<!-- FILTERS -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="education">Education</button>
+  <button class="filter-btn" data-filter="irl">IRL</button>
+  <button class="filter-btn" data-filter="documentary">Documentary</button>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<section class="portfolio-grid-wrap">
+  <div class="portfolio-grid" id="portfolioGrid"></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="faq" style="padding-top:0;">
+  <div class="final-cta">
+    <h3>Let's collaborate <span class="accent">together</span></h3>
+    <p>Let's refine your content through strong visuals and practical creative planning.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="hire.html" class="btn" style="background:#fff; color:var(--blue);">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="brand footer-brand">
+    <span class="brand-logo">W</span>
+    <span class="brand-name">WayfarerDesign</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#workflow">Workflow</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#faqs">FAQs</a>
+  </div>
+  <p class="footer-copy">© 2026 WayfarerDesign. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
