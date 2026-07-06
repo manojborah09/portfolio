@@ -46,6 +46,7 @@ function buildMarqueeColumn(track) {
     div.className = "thumb";
     if (item.image) {
       div.style.backgroundImage = `url(${item.image})`;
+      div.addEventListener("click", () => openLightbox(item.image));
     } else {
       div.style.background = item.color;
     }
@@ -105,11 +106,11 @@ const portfolioItems = [
 
   { niche: "irl", image: "images/IRL/JordanBently.png", title: "Trying The BEST French & Senegalese Restaurants in LA", channel: "Wayfarer Design" },
 
-  { niche: "irl", image: "images/IRL/Version-01.jpg", title: "I Spent 30 Days Recreating Goku’s Physique (Here’s What Happened)", channel: "Wayfarer Design" },
+  { niche: "irl", image: "images/IRL/Version-01.jpg", title: "I Spent 30 Days Recreating Goku's Physique (Here's What Happened)", channel: "Wayfarer Design" },
 
   { niche: "irl", image: "images/IRL/kendo.png", title: "I Challenged a Real Life Samurai", channel: "Wayfarer Design" },
 
-  { niche: "education", image: "images/Education/Secret.png", avatar: "images/avatar/jaden.jpg", title: "How Billionaires Make Decisions (The System You Don’t See)", channel: "Jaden Bottarini" },
+  { niche: "education", image: "images/Education/Secret.png", avatar: "images/avatar/jaden.jpg", title: "How Billionaires Make Decisions (The System You Don't See)", channel: "Jaden Bottarini" },
 
   { niche: "education", image: "images/Education/Kube02.png", title: "The Psychology Behind Top 1% Sales Performance", channel: "Wayfarer Design" },
 
@@ -141,11 +142,11 @@ const portfolioItems = [
 
   { niche: "education", image: "images/Education/meta.jpg", avatar: "images/avatar/jaden.jpg", title: "How This Facebook Ads Funnel Made $15K/Month (Full Strategy)", channel: "Jaden Bottarini" },
 
-  { niche: "education", image: "images/Education/stupid02.png", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
+  { niche: "education", image: "images/Education/stupid02.jpg", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
 
-  { niche: "education", image: "images/Education/whoop02.png", title: "The Only Tools You Need To Make Money Online With AI", channel: "Wayfarer Design" },
+  { niche: "education", image: "images/Education/whoop02.jpg", title: "The Only Tools You Need To Make Money Online With AI", channel: "Wayfarer Design" },
 
-  { niche: "education", image: "images/Education/stupid03.png", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
+  { niche: "education", image: "images/Education/stupid03.jpg", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
 
 ];
 
@@ -168,6 +169,11 @@ function renderPortfolio(filter) {
       thumb.style.backgroundImage = `url(${item.image})`;
       thumb.style.backgroundSize = "cover";
       thumb.style.backgroundPosition = "center";
+      thumb.addEventListener("click", () => openLightbox(item.image, {
+        title: item.title,
+        channel: item.channel,
+        avatar: item.avatar
+      }));
     } else {
       thumb.style.background = item.color;
     }
@@ -227,6 +233,52 @@ if (portfolioGrid) {
       btn.classList.add("active");
       renderPortfolio(btn.dataset.filter);
     });
+  });
+}
+
+// ---------- LIGHTBOX ----------
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+const lightboxMeta = document.getElementById("lightboxMeta");
+const lightboxAvatar = document.getElementById("lightboxAvatar");
+const lightboxTitle = document.getElementById("lightboxTitle");
+const lightboxChannel = document.getElementById("lightboxChannel");
+
+function openLightbox(src, meta) {
+  if (!src || !lightbox) return;
+  lightboxImg.src = src;
+
+  if (meta && meta.title) {
+    lightboxMeta.classList.add("has-content");
+    lightboxTitle.textContent = meta.title;
+    lightboxChannel.textContent = meta.channel || "";
+    if (meta.avatar) {
+      lightboxAvatar.style.backgroundImage = `url(${meta.avatar})`;
+      lightboxAvatar.textContent = "";
+    } else {
+      lightboxAvatar.style.backgroundImage = "";
+      lightboxAvatar.textContent = (meta.channel || "?").charAt(0);
+    }
+  } else {
+    lightboxMeta.classList.remove("has-content");
+  }
+
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+if (lightbox) {
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
   });
 }
 
