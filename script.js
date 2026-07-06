@@ -2,13 +2,37 @@
 // Replace "color" with a real image later, e.g. { image: "images/thumb1.jpg" }
 const marqueeSets = {
   track1: [
-    { color: "#1f2937" }, { color: "#2e5bff" }, { color: "#0f172a" },
+    { image: "images/IRL/theatre.png" },
+    { image: "images/IRL/frozenfood.jpg" },
+    { image: "images/IRL/airrack_day.png" },
+    { image: "images/IRL/01_03.png" },
+    { image: "images/IRL/02_01_notext.png" },
+    { image: "images/IRL/3.png" },
+    { image: "images/IRL/4.png" },
+    { image: "images/IRL/final_text.png" },
+    { image: "images/IRL/Version-01.jpg" },
   ],
   track2: [
-    { color: "#374151" }, { color: "#111827" }, { color: "#1e3a8a" },
+    { image: "images/Documentary/02_01.jpg" },
+    { image: "images/Documentary/eatin01.jpg" },
+    { image: "images/Documentary/quiting.png" },
+    { image: "images/Documentary/GoogleVEO3.jpg" },
+    { image: "images/Documentary/progression01.png" },
+    { image: "images/Documentary/miketyson.png" },
+    { image: "images/Documentary/legends.jpg" },
+    { image: "images/Documentary/Jaoflix.jpg" },
+    { image: "images/Documentary/02.jpg" },
   ],
   track3: [
-    { color: "#4b5563" }, { color: "#1f2937" }, { color: "#0f172a" },
+    { image: "images/Education/JonathanScaled.jpg" },
+    { image: "images/Education/kube02.png" },
+    { image: "images/Education/lasthope.png" },
+    { image: "images/Education/Lovable.png" },
+    { image: "images/Education/Artboard1.png" },
+    { image: "images/Education/stupid02.jpg" },
+    { image: "images/Education/ai.png" },
+    { image: "images/Education/whoop01.jpg" },
+    { image: "images/Education/stupid03.jpg" },
   ],
 };
 
@@ -43,21 +67,86 @@ document.querySelectorAll(".faq-item").forEach(item => {
 
 // ---------- PORTFOLIO GRID (YouTube-style cards, filterable by niche) ----------
 // Replace "color" with a real image path, e.g. { image: "images/edu1.jpg" }
-// Add `personal: true` + optional `label` to any item that's a practice/personal
-// piece rather than real client work — it'll show the label instead of view stats.
+// Add `avatar: "images/xyz.jpg"` for a real channel profile picture (falls back
+// to a letter circle if omitted).
+// Add `personal: true` for a practice/concept piece — it hides the verified tick
+// since there's no real association to claim.
+// Note: view counts and time-since-posted are intentionally not displayed anywhere.
 const portfolioItems = [
-  { niche: "education", color: "#1f2937", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "MoneyMindset", duration: "14:22", views: "482K views", time: "2 weeks ago" },
-  { niche: "education", color: "#2e5bff", title: "Why You Keep Losing (And How to Fix It)", channel: "GrowthLab", duration: "9:41", views: "1.1M views", time: "1 month ago" },
-  { niche: "education", color: "#0f172a", title: "The $30,000/Month Freelance Blueprint", channel: "SkillStack", duration: "18:05", personal: true, label: "Personal project" },
-  { niche: "irl", color: "#374151", title: "I Tried Cheap vs Luxury Movie Theaters", channel: "DailyDare", duration: "12:37", views: "890K views", time: "5 days ago" },
-  { niche: "irl", color: "#111827", title: "$1 = Dance in the Middle of London", channel: "StreetStunts", duration: "16:12", views: "1.4M views", time: "2 months ago" },
-  { niche: "irl", color: "#1e3a8a", title: "Sleeping Rough for 24 Hours Challenge", channel: "OutThere", duration: "21:58", personal: true, label: "Concept piece" },
-  { niche: "documentary", color: "#4b5563", title: "I Quit My PhD to Become a Full-Time Artist", channel: "RealStories", duration: "24:10", views: "310K views", time: "4 days ago" },
-  { niche: "documentary", color: "#1f2937", title: "Inside the World's Loneliest Job", channel: "ThreadDocs", duration: "27:33", views: "740K views", time: "3 weeks ago" },
-  { niche: "documentary", color: "#0f172a", title: "The Town That Banned the Internet", channel: "RealStories", duration: "19:47", personal: true, label: "Practice redesign" },
-  { niche: "healthcare", color: "#134e4a", title: "What Doctors Don't Tell You About Sleep", channel: "WellnessWire", duration: "11:28", views: "560K views", time: "1 week ago" },
-  { niche: "healthcare", color: "#0f766e", title: "I Tracked My Blood Sugar for 30 Days", channel: "VitalSigns", duration: "15:52", views: "410K views", time: "2 weeks ago" },
-  { niche: "healthcare", color: "#115e59", title: "The Truth About Cold Plunges", channel: "WellnessWire", duration: "13:19", personal: true, label: "Personal project" },
+  { niche: "irl", image: "images/IRL/01_03.png", avatar: "images/avatar/BaxterPersse.jpg", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "Baxter Persse" },
+
+  { niche: "documentary", image: "images/Documentary/legends.jpg", avatar: "images/avatar/legends.jpg", title: "How Donald Trump's Grandfather Built The Empire With Gold", channel: "Legends of Gold with Dave Turin" },
+
+  { niche: "documentary", image: "images/Documentary/quiting.png", title: "I Quit My PhD to Become a Full-Time Artist", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/frozenfood.jpg", title: "I Tested £100 of Frozen Costco Meals", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/02_01_notext.png", avatar: "images/avatar/BaxterPersse.jpg", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "Baxter Persse" },
+
+  { niche: "irl", image: "images/IRL/airrack_day.png", title: "I Opened A FAKE 5-Star Restaurant In My House!", channel: "Wayfarer Design" },
+
+  { niche: "documentary", image: "images/Documentary/02.jpg", avatar: "images/avatar/legends.jpg", title: "HIS GOLD WON INDEPENDENCE - The forgotten patriot who funded the American Revolution", channel: "Legends of Gold with Dave Turin" },
+
+  { niche: "education", image: "images/Education/Artboard1.png", avatar: "images/avatar/luke.jpg", title: "How To Master Trading SMT + 10RR Trade Breakdown", channel: "LukesProjections" },
+
+  { niche: "education", image: "images/Education/mindset.jpg", avatar: "images/avatar/jaden.jpg", title: "Thinking in Decades: The Mindset That Separates the Top 1%", channel: "Jaden Bottarini" },
+
+  { niche: "irl", image: "images/IRL/4.png", avatar: "images/avatar/BaxterPersse.jpg", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "Baxter Persse" },
+
+  { niche: "irl", image: "images/IRL/101.png", avatar: "images/avatar/joseph.png", title: "Exploring the Strangest Places in the World", channel: "Thumbnails 101" },
+
+  { niche: "documentary", image: "images/Documentary/progression01.png",  title: "I Spent 10 Years Sculpting THIS Dragon…", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/whoop01.jpg",  title: "The Clipping Business That Pays", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/JonathanScaled.jpg", title: "How Freelance Brand Scaling Bought Me My Dream Penthouse", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/emailoutreacha.png", avatar: "images/avatar/tommy.jpg", title: "How To Get An 80% Reply Rate On Outreach (WITHOUT GETTING NO's)", channel: "Tommy loutzenheiser" },
+
+  { niche: "irl", image: "images/IRL/JordanBently.png", title: "Trying The BEST French & Senegalese Restaurants in LA", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/Version-01.jpg", title: "I Spent 30 Days Recreating Goku’s Physique (Here’s What Happened)", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/kendo.png", title: "I Challenged a Real Life Samurai", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/Secret.png", avatar: "images/avatar/jaden.jpg", title: "How Billionaires Make Decisions (The System You Don’t See)", channel: "Jaden Bottarini" },
+
+  { niche: "education", image: "images/Education/Kube02.png", title: "The Psychology Behind Top 1% Sales Performance", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/lasthope.png", title: "0 → 10 Clients: The Exact Process I Used (Full Breakdown)", channel: "Wayfarer Design" },
+
+  { niche: "documentary", image: "images/Documentary/02_01.jpg",  title: "Hollywood's Dirtiest Secret Was a Real Cowboy", channel: "Wayfarer Design" },
+
+  { niche: "documentary", image: "images/Documentary/miketyson.png",  title: "Mike Tyson Was a Monster in His Prime", channel: "Wayfarer Design" },
+
+  { niche: "documentary", image: "images/Documentary/eatin01.jpg",  title: "I Ate Only Eggs For 1 Week (Big Mistake?)", channel: "Wayfarer Design" },
+
+  { niche: "documentary", image: "images/Documentary/04_01.jpg", avatar: "images/avatar/legends.jpg", title: "How Wyatt Earp Became The Most Feared Gunman of The Wild West ", channel: "Legends of Gold with Dave Turin" },
+
+  { niche: "irl", image: "images/IRL/3.png", avatar: "images/avatar/BaxterPersse.jpg", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "Baxter Persse" },
+
+  { niche: "irl", image: "images/IRL/final_text.png", avatar: "images/avatar/mansion.jpg", title: "We never planned for this... | Mansion on Waverly Hill Historic Restoration Project", channel: "Mansion on Waverly Hill" },
+
+  { niche: "irl", image: "images/IRL/theatre.png", title: "I Tried Cheap vs Luxury Movie Theaters", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/restrat.jpg", title: "I Faked Being a Food Critic for Free Food", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/fruit.jpg", title: "I Ate The King Of Fruits (I Regret It)", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "images/IRL/KSI.png", title: "Can YouTubers Beat Pro Footballers?", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/ai.png", title: "The Exact System Behind My First $20K", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/Lovable.png", title: "How I'd Make Money If I Had to Start Over", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/meta.jpg", avatar: "images/avatar/jaden.jpg", title: "How This Facebook Ads Funnel Made $15K/Month (Full Strategy)", channel: "Jaden Bottarini" },
+
+  { niche: "education", image: "images/Education/stupid02.png", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/whoop02.png", title: "The Only Tools You Need To Make Money Online With AI", channel: "Wayfarer Design" },
+
+  { niche: "education", image: "images/Education/stupid03.png", title: "5 Positioning Mistakes (99% Get This Wrong)", channel: "Wayfarer Design" },
+
 ];
 
 const portfolioGrid = document.getElementById("portfolioGrid");
@@ -91,34 +180,34 @@ function renderPortfolio(filter) {
       thumb.appendChild(nicheTag);
     }
 
-    const duration = document.createElement("span");
-    duration.className = "yt-duration";
-    duration.textContent = item.duration;
-    thumb.appendChild(duration);
-
     const meta = document.createElement("div");
     meta.className = "yt-meta";
 
     const avatar = document.createElement("div");
     avatar.className = "yt-avatar";
-    avatar.textContent = item.channel.charAt(0);
+    if (item.avatar) {
+      avatar.style.backgroundImage = `url(${item.avatar})`;
+      avatar.style.backgroundSize = "cover";
+      avatar.style.backgroundPosition = "center";
+    } else {
+      avatar.textContent = item.channel.charAt(0);
+    }
 
     const info = document.createElement("div");
     info.className = "yt-info";
 
     if (item.personal) {
+      // No verified tick for concept/practice pieces — no real association to claim
       info.innerHTML = `
         <p class="yt-title">${item.title}</p>
         <p class="yt-channel">${item.channel}</p>
-        <p class="yt-stats yt-personal-label">${item.label || "Personal project"}</p>
       `;
     } else {
       info.innerHTML = `
         <p class="yt-title">${item.title}</p>
         <p class="yt-channel">${item.channel}
-          <svg class="yt-verified" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 1.4 2.7-.6 1.6 2.3 2.7.9-.1 2.8 1.7 2.2-1.7 2.2.1 2.8-2.7.9-1.6 2.3-2.7-.6L12 22l-2.4-1.4-2.7.6-1.6-2.3-2.7-.9.1-2.8L1 12l1.7-2.2-.1-2.8 2.7-.9 1.6-2.3 2.7.6z"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          <svg class="yt-verified" width="14" height="14" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
         </p>
-        <p class="yt-stats">${item.views} • ${item.time}</p>
       `;
     }
 
