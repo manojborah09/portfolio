@@ -132,6 +132,7 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   transition: transform 0.2s ease;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 .yt-card:hover .yt-thumb { transform: translateY(-4px); }
 .yt-niche-tag {
@@ -261,6 +262,7 @@ a { text-decoration: none; color: inherit; }
   padding: 20px 24px 100px;
   height: 620px;
   overflow: hidden;
+  position: relative;
   mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
@@ -300,9 +302,9 @@ a { text-decoration: none; color: inherit; }
   box-shadow: var(--shadow);
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
-.marquee-cta { display: none; }
 
 /* ---------- PROCESS ---------- */
 .process, .services, .faq {
@@ -432,39 +434,20 @@ a { text-decoration: none; color: inherit; }
 .footer-links a:hover { color: var(--text-dark); }
 .footer-copy { font-size: 13px; color: var(--text-gray); font-family: var(--font-body); }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 860px) {
-  .steps, .service-grid { grid-template-columns: 1fr; }
-  .marquee-wrap { height: 460px; }
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+/* ---------- FOOTER SOCIALS ---------- */
+.footer-socials { display: flex; gap: 16px; }
+.footer-socials a {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid #e7e9ee;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease;
 }
-@media (max-width: 640px) {
-  .nav-links { display: none; }
-  .hero-title { font-size: 34px; }
-  .marquee-wrap { flex-direction: row; height: 500px; gap: 10px; position: relative; }
-  .marquee-cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--blue);
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 14px 26px;
-    border-radius: var(--radius-full);
-    box-shadow: 0 10px 30px rgba(46, 91, 255, 0.45);
-    z-index: 5;
-    white-space: nowrap;
-  }
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
-  .yt-title { font-size: 13px; }
-  .yt-channel { font-size: 11.5px; }
-  .yt-avatar { width: 30px; height: 30px; font-size: 12px; }
-}
+.footer-socials a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
 
 /* ---------- LIGHTBOX ---------- */
 .lightbox-overlay {
@@ -542,19 +525,30 @@ a { text-decoration: none; color: inherit; }
 }
 .lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
 
-.yt-thumb, .thumb { cursor: pointer; }
-
-/* ---------- FOOTER SOCIALS ---------- */
-.footer-socials { display: flex; gap: 16px; }
-.footer-socials a {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: var(--card-bg);
-  border: 1px solid #e7e9ee;
-  color: var(--text-gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s ease, color 0.15s ease;
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 860px) {
+  .steps, .service-grid { grid-template-columns: 1fr; }
+  .marquee-wrap { height: 460px; }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
-.footer-socials a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hero-title { font-size: 34px; }
+  .marquee-wrap {
+    flex-direction: row;
+    height: 500px;
+    gap: 10px;
+    position: relative;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+  .marquee-col { flex: 0 0 150px; }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+  .yt-title { font-size: 13px; }
+  .yt-channel { font-size: 11.5px; }
+  .yt-avatar { width: 30px; height: 30px; font-size: 12px; }
+}
