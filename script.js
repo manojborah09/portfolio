@@ -124,7 +124,7 @@ const portfolioItems = [
 
   { niche: "documentary", image: "/images/Documentary/eatin01.jpg",  title: "I Ate Only Eggs For 1 Week (Big Mistake?)", channel: "Wayfarer Design" },
 
-  { niche: "irl", image: "/images/IRL/vjwn.png", avatar: "/images/avatar/mansion.jpg", title: "Nepal 2026: How Kathmandu has changed after the tragedy", channel: "Viajenturas" },
+  { niche: "irl", image: "/images/IRL/vjwn.png", avatar: "/images/avatar/01_men.png", title: "Nepal 2026: How Kathmandu has changed after the tragedy", channel: "Viajenturas" },
 
   { niche: "documentary", image: "/images/Documentary/04_01.jpg", avatar: "/images/avatar/legends.jpg", title: "How Wyatt Earp Became The Most Feared Gunman of The Wild West ", channel: "Legends of Gold with Dave Turin" },
 
