@@ -82,6 +82,8 @@ const portfolioItems = [
 
   { niche: "irl", image: "/images/IRL/frozenfood.jpg", title: "I Tested £100 of Frozen Costco Meals", channel: "Wayfarer Design" },
 
+  { niche: "irl", image: "/images/IRL/journey.png", title: "I’m Overweight… So I Trained for a 5K", channel: "Wayfarer Design" },
+
   { niche: "irl", image: "/images/IRL/02_01_notext.png", avatar: "/images/avatar/BaxterPersse.jpg", title: "I Turned $0.01 into $10,000 in 14 Days", channel: "Baxter Persse" },
 
   { niche: "irl", image: "/images/IRL/airrack_day.png", title: "I Opened A FAKE 5-Star Restaurant In My House!", channel: "Wayfarer Design" },
@@ -121,6 +123,8 @@ const portfolioItems = [
   { niche: "documentary", image: "/images/Documentary/miketyson.png",  title: "Mike Tyson Was a Monster in His Prime", channel: "Wayfarer Design" },
 
   { niche: "documentary", image: "/images/Documentary/eatin01.jpg",  title: "I Ate Only Eggs For 1 Week (Big Mistake?)", channel: "Wayfarer Design" },
+
+  { niche: "irl", image: "/images/IRL/vjwn.png", avatar: "/images/avatar/mansion.jpg", title: "Nepal 2026: How Kathmandu has changed after the tragedy", channel: "Viajenturas" },
 
   { niche: "documentary", image: "/images/Documentary/04_01.jpg", avatar: "/images/avatar/legends.jpg", title: "How Wyatt Earp Became The Most Feared Gunman of The Wild West ", channel: "Legends of Gold with Dave Turin" },
 
